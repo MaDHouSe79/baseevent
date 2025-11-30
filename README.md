@@ -1,4 +1,5 @@
-# baseevent
+# [cfx-default]/system/baseevent/vehiclechecker.lua
+
 This is de default baseevent for fivem that give you F8 spawn warnings, here is a code that wil fix that.
 Why this works is it checks if the netid is valid, if nog you get nil and not a F8 warning hell..
 
