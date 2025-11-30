@@ -1,6 +1,6 @@
 # File location: [cfx-default]/system/baseevent/vehiclechecker.lua
 
-This is de default baseevent for fivem that give you F8 spawn warning hell, here is a code that wil fix that.
+This is de default baseevent vehiclechecker.lua file for fivem that give you F8 spawn warning hell, here is a code that wil fix that.
 Why this works is it checks if the netid is valid, if not you get nil and not a F8 warning hell..
 
 # ***Zero F8 Warnings** (No 65534 BS)*
