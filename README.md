@@ -23,6 +23,7 @@ Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
 		local ped = PlayerPedId()
+		local times = 15000
 		if not isInVehicle and not IsPlayerDead(PlayerId()) then
 			if DoesEntityExist(GetVehiclePedIsTryingToEnter(ped)) and not isEnteringVehicle then
 				-- trying to enter a vehicle!
@@ -32,8 +33,11 @@ Citizen.CreateThread(function()
 				local netId = -1
                 CreateThread(function()
                     repeat
-                        Wait(100)
+						times = times - 100
+                        if times <= 0 then break end
+						Wait(100)
                         netId = SafeNetId(vehicle)
+
                     until netId and netId > 0 and netId < 65535 and NetworkDoesNetworkIdExist(netId)
                     if netId ~= -1 then 
 						isEnteringVehicle = true
@@ -52,6 +56,8 @@ Citizen.CreateThread(function()
 				local netId = -1
                 CreateThread(function()
                     repeat
+						times = times - 100
+                        if times <= 0 then break end
                         Wait(100)
                         netId = SafeNetId(currentVehicle)
                     until netId and netId > 0 and netId < 65535 and NetworkDoesNetworkIdExist(netId)
@@ -71,6 +77,8 @@ Citizen.CreateThread(function()
 				local netId = -1
                 CreateThread(function()
                     repeat
+						times = times - 100
+                        if times <= 0 then break end
                         Wait(100)
                         netId = SafeNetId(currentVehicle)
                     until netId and netId > 0 and netId < 65535 and NetworkDoesNetworkIdExist(netId)
