@@ -4,7 +4,7 @@ This is the default `[cfx-default]/system/baseevent/vehiclechecker.lua` file for
 
 Why this works is it checks if the netid is valid, if not you get nil and not a F8 warning hell..
 
-This fix wil also works for other scripts, you just need to check the netid number and if it exist wuith (netId > 0 and netId < 65535), 
+This fix wil also works for other scripts, you just need to check the netid number and if it exist with (netId > 0 and netId < 65535), 
 but there is a thing you need to know, you need to wait a few secs like 2/3 before you know if a netid is valid and registered to the network.
 
 ```lua
